@@ -57,5 +57,21 @@ public void setEdad(int edad) {
 }
 public void setSaldo(double saldo){
     this.saldo = saldo; 
-}  
+}
+ // Override metodo equals
+ public boolean equals(Object obj){
+    if (obj instanceof Usuario){
+        Usuario tmpUsuario = (Usuario) obj; 
+        if (this.cedula.equals(tmpUsuario.cedula)){ 
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+        }else {
+            return false;
+        }
+
+    }
 }
